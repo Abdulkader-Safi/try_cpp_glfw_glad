@@ -8,14 +8,12 @@ LDFLAGS = -L/opt/homebrew/lib -lglfw -ldl -framework OpenGL
 # Target binary and source files
 TARGET = out/main
 SRC = src/main.cpp src/glad.cpp
-HEADERS = include/shader_s.h
+# HEADERS = -Isrc/learnopengl/shader_s.h
 
 # Include and library directories
 INCLUDE_DIRS = -Iinclude -I/opt/homebrew/include
 LIB_DIRS = -L/opt/homebrew/lib
 
-# Build rules
-all: $(TARGET)
 
 $(TARGET): $(SRC) $(HEADERS)
 	$(CXX) $(CXXFLAGS) $(INCLUDE_DIRS) $(SRC) -o $(TARGET) $(LDFLAGS)
