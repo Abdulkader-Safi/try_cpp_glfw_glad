@@ -1,0 +1,27 @@
+{
+	"configurations": [
+		{
+			"name": "Mac",
+			"includePath": [
+				"${workspaceFolder}/**",
+				"${workspaceFolder}/include", // Include folder for glad and other headers
+				"/opt/homebrew/include" // General include path for libraries
+			],
+			"defines": [
+				"__APPLE__", // Define for macOS-specific builds
+				"GLFW_INCLUDE_NONE" // Prevent GLFW from including OpenGL headers
+			],
+			"macFrameworkPath": [
+				"/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks",
+				"/System/Library/Frameworks",
+				"/Library/Frameworks" // Ensure additional frameworks are accessible
+			],
+			"compilerPath": "/usr/bin/clang",
+			"cStandard": "c17",
+			"cppStandard": "c++17",
+			"intelliSenseMode": "macos-clang-arm64",
+			"configurationProvider": "ms-vscode.makefile-tools"
+		}
+	],
+	"version": 4
+}
