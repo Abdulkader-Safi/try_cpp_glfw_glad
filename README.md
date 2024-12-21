@@ -9,7 +9,6 @@
 ### Install packages
 
 ```bash
-brew install sdl2
 brew install glfw
 ```
 
