@@ -24,6 +24,7 @@ clean:
 	rm -f $(TARGET)
 
 run:
+	clear
 	$(TARGET)
 
 # Phony targets to avoid conflicts with files named 'all' or 'clean'
